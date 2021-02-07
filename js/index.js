@@ -42,10 +42,12 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Updating the text content of the nav links
-const nav = document.querySelectorAll('a');
-nav.forEach(element => {
-  element.textContent = siteContent["nav"][element]
-});
+// const nav = document.querySelectorAll('a');
+// nav.forEach((element, index) => {
+//   element.textContent = siteContent["nav"].index;
+// });
+
+document.querySelectorAll('a').forEach((element, index) => element.textContent = Object.values(siteContent.nav)[index]);
   
 // Updating the header content
 
