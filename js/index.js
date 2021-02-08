@@ -69,7 +69,9 @@ middleImg.setAttribute('src', siteContent['middle-img-src']);
 const contact = Object.values(document.querySelector('.contact').children);
 contact.forEach((element, index) => element.textContent = Object.values(siteContent['contact'])[index]);
 
-
+// Updating footer
+const foot = document.querySelector('footer p');
+foot.textContent = Object.values(siteContent['footer']);
 
 
 
