@@ -25,7 +25,7 @@ const siteContent = {
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
-  "middle-img-src": "img/mid-page-accent.jpg",
+  "middle-img-src": "img/mid-page-accent.jpg", // I pulled this out of main-content so I could easily iterate through the h4-p pairs
   "contact": {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
@@ -62,7 +62,8 @@ ctaImg.setAttribute('src', siteContent.cta["img-src"]);
 const main = document.querySelectorAll(".text-content h4, .text-content p");
 main.forEach((element, index) => element.textContent = Object.values(siteContent["main-content"])[index]);
 
-
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent['middle-img-src']);
 
 
 
