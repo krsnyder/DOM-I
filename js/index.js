@@ -44,7 +44,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Updating the text content of the nav links
 const nav = document.querySelectorAll('a');
 nav.forEach((element, index) => element.textContent = Object.values(siteContent.nav)[index]);
-  
+nav.forEach(element => element.style.color = 'green'); // Changing color of navigation text
+
 // Updating the header content
 
 let header = document.querySelector("h1");
@@ -72,6 +73,17 @@ contact.forEach((element, index) => element.textContent = Object.values(siteCont
 // Updating footer
 const foot = document.querySelector('footer p');
 foot.textContent = Object.values(siteContent['footer']);
+
+// Adding new content
+let navNode = document.querySelector('header nav');
+let navNode1 = document.createElement('a');
+navNode1.textContent = "Careers";
+navNode1.style.color = 'green';
+let navNode2 = document.createElement('a');
+navNode2.textContent = "Free Money!";
+navNode2.style.color = 'green';
+navNode.appendChild(navNode1);
+navNode.prepend(navNode2);
 
 
 
