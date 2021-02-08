@@ -18,7 +18,6 @@ const siteContent = {
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "middle-img-src": "img/mid-page-accent.jpg",
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "product-h4":"Product",
@@ -26,6 +25,7 @@ const siteContent = {
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
+  "middle-img-src": "img/mid-page-accent.jpg",
   "contact": {
     "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
@@ -42,12 +42,8 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Updating the text content of the nav links
-// const nav = document.querySelectorAll('a');
-// nav.forEach((element, index) => {
-//   element.textContent = siteContent["nav"].index;
-// });
-
-document.querySelectorAll('a').forEach((element, index) => element.textContent = Object.values(siteContent.nav)[index]);
+const nav = document.querySelectorAll('a');
+nav.forEach((element, index) => element.textContent = Object.values(siteContent.nav)[index]);
   
 // Updating the header content
 
@@ -60,6 +56,20 @@ ctaButton.textContent = siteContent.cta.button;
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent.cta["img-src"]);
+
+// Updating Main Content
+
+const main = document.querySelectorAll(".text-content h4, .text-content p");
+main.forEach((element, index) => element.textContent = Object.values(siteContent["main-content"])[index]);
+
+
+
+
+
+
+
+
+
 
 
 
