@@ -65,6 +65,9 @@ main.forEach((element, index) => element.textContent = Object.values(siteContent
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent['middle-img-src']);
 
+// Updating contact information
+const contact = Object.values(document.querySelector('.contact').children);
+contact.forEach((element, index) => element.textContent = Object.values(siteContent['contact'])[index]);
 
 
 
