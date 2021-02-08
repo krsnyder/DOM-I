@@ -10,7 +10,7 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
-    "button": "Get Started",
+    "button": "Push Me",
     "img-src": "img/header-img.png"
   },
   "main-content": {
@@ -54,6 +54,22 @@ header.textContent = siteContent.cta.h1;
 
 let ctaButton = document.querySelector("button");
 ctaButton.textContent = siteContent.cta.button;
+let bod = document.querySelector("body");
+bod.classList.add("white");
+header.classList.add('white')
+ctaButton.addEventListener('click', () => {
+  if (bod.classList.contains("white")) {
+    bod.classList.remove("white")
+    header.classList.remove("white")
+    bod.classList.add("black")
+    header.classList.add("black")
+  } else if (bod.classList.contains("black")) {
+    bod.classList.remove("black")
+    bod.classList.add("white")
+    header.classList.remove("black")
+    header.classList.add("white")
+  }
+})
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent.cta["img-src"]);
