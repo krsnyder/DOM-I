@@ -31,6 +31,14 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+.white {
+    background-color: white;
+    color:black;
+}
+.black {
+    background-color: black;
+    color:white;
+}
 ol, ul {
 	list-style: none;
 }
